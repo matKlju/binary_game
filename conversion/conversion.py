@@ -1,17 +1,12 @@
 from .binary import getBinary
 from .decimal import getDecimal
+from menu.menuTexts import conversionText
 
 
 def conversion():
-    text = """
-0. EXIT
-1. Binary to decimal
-2. Decimal to binary
---------------------------
-"""
     choices = ("1", "2", "0")
     while True:
-        choice = input(text)
+        choice = input(conversionText)
         if choice not in choices:
             print("!!! Only given choices")
             continue

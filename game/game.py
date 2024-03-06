@@ -1,18 +1,11 @@
+from menu.menuTexts import gameDifficultyText, gameMenu
 from conversion.binary import randomBinary
 from conversion.decimal import insertDecimal
 
 
 def gameDifficulty():
-    text = """
-0. EXIT - return
-1. Easy        4 bit  1 nibble (1/2 byte)15 dec max
-3. Medium      8 bit  1 byte            256 dec max
-5. Hard       16 bit  2 byte         65 535 dec max
-7. Very hard  32 bit  4 byte  4 294 967 295 dec max
---------------------------
-"""
     while True:
-        choice = int(input(text))
+        choice = int(input(gameDifficultyText))
         if choice not in range(8):
             print("!!! Only given choices")
             continue
@@ -34,14 +27,8 @@ def guessDecimal(difficulty):
 
 
 def game():
-    text = """
-0. EXIT - return
-1. Guess binary
-2. Guess decimal
---------------------------
-"""
     while True:
-        choice = int(input(text))
+        choice = int(input(gameMenu))
         if choice not in range(3):
             print("!!! Only given choices")
             continue

@@ -1,19 +1,13 @@
 import sys
 from game.game import game
+from menu.menuTexts import mainMenuText
 from conversion.conversion import conversion
 
 
 def mainMenu():
-    text = """
-0. EXIT - return
-1. Conversion
-2. Game
-3. Info
---------------------------
-"""
     choices = ("1", "2", "3", "0")
     while True:
-        choice = input(text)
+        choice = input(mainMenuText)
         if choice not in choices:
             print("!!! Only given choices")
             continue
