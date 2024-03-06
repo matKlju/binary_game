@@ -25,6 +25,6 @@ into your CLI, in the folder root directory
 │   └── decimal.py
 ├── game
 │   └── game.py
-├── main.py
+└── main.py
 
 ```
