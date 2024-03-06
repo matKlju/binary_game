@@ -1,5 +1,6 @@
 import re
 from random import choice
+from menu.menuTexts import lengthMenuText, enterBinaryText, getBinaryText
 
 
 def is_binary(value):
@@ -8,13 +9,9 @@ def is_binary(value):
 
 
 def getLength() -> int:
-    text = """
-Bits (1 - 32), 0 = return
---------------------------
-"""
     while True:
         try:
-            result = int(input(text))
+            result = int(input(lengthMenuText))
             if result == 0:
                 break
             if result not in range(1, 33):
@@ -26,13 +23,9 @@ Bits (1 - 32), 0 = return
 
 
 def insertBinary():
-    text = """
-Enter binary number
---------------------------
-Binary: """
     while True:
         try:
-            binaryNumber = str(int(input(text)))
+            binaryNumber = str(int(input(enterBinaryText)))
             for char in binaryNumber():
                 if char not in ["1", "0"]:
                     print("Incorrect binary number!")
@@ -50,16 +43,9 @@ def randomBinary(length) -> str:
 
 
 def getBinary():
-    text = """
-BIN -> DEC
-0. EXIT - return
-1. Insert binary
-2. Generate binary
---------------------------
-"""
     choices = ("1", "2", "0")
     while True:
-        choice = input(text)
+        choice = input(getBinaryText)
         if choice not in choices:
             print("Only given choices")
             continue
