@@ -2,6 +2,8 @@
 __pycache__/
 conversion/__pycache__/
 ./build
+main_spec
+.main_spec
 .gitignore
 *.py[cod]
 *$py.class
