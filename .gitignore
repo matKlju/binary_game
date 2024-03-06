@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 conversion/__pycache__/
+./build
 .gitignore
 *.py[cod]
 *$py.class
